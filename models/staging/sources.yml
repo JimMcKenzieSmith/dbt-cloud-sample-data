@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: snowflake_sample_data_tpch_sf1
+    database: "{{ var('source_database') }}"
+    schema: "{{ var('source_schema') }}"
+
+    tables:
+      - name: lineitem
