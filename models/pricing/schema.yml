@@ -1,0 +1,47 @@
+
+version: 2
+
+models:
+    - name: pricing_summary_past_90
+      description: "The Pricing Summary Report Query provides a summary pricing report for all line items shipped within 90 days of the greatest ship date contained in the database."
+      columns:
+          - name: l_returnflag
+            description: "The return status of the line items."
+            tests:
+                - not_null
+          - name: l_linestatus
+            description: "The overall status of the line items."
+            tests:
+                - not_null
+          - name: sum_qty
+            description: "The sum of quantity for the return flag and line status combination."
+            tests:
+                - not_null
+          - name: sum_base_price
+            description: "A sum of the extended price of the line items."
+            tests:
+                - not_null
+          - name: sum_disc_price
+            description: "A sum of the discounts on the extended price of the line items."
+            tests:
+                - not_null
+          - name: sum_charge
+            description: "A sum of what was charged, minus discounts and plus tax."
+            tests:
+                - not_null
+          - name: avg_qty
+            description: "The average quantity of the line items."
+            tests:
+                - not_null
+          - name: avg_price
+            description: "The average extended price of the line items."
+            tests:
+                - not_null
+          - name: avg_disc
+            description: "The average discount of the line items."
+            tests:
+                - not_null
+          - name: count_order
+            description: "A count of orders for the return flag and line status combination."
+            tests:
+                - not_null
