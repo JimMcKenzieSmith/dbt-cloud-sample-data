@@ -31,4 +31,9 @@ Go over to Snowflake and browse your databases and schemas to see that you now h
 
 Query the views.
 
+Setup a deployment in dbt Cloud (name it whatever you want).  Use the same `REPORTING` database, but a different schema such as `ANALYTICS`. Setup the deployment job and run it.
+
+Go over to Snowflake and browse your databases and schemas to see that you now have two views that were created by Dbt:
+* REPORTING.ANALYTICS.PRICING_SUMMARY_PAST_90
+* REPORTING.ANALYTICS_STAGING.STG_LINEITEM
 
