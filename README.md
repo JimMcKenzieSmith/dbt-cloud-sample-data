@@ -17,7 +17,7 @@ create database reporting;
 ```
 
 * Get a free dbt Cloud developer account: https://www.getdbt.com/pricing
-* In setup of the dbt Cloud account, set the database to `REPPORTING` and the warehouse to `COMPUTE_WH`.
+* In setup of the dbt Cloud account, set the database to `REPORTING` and the warehouse to `COMPUTE_WH`.
 * Enter a developer schema into Dbt cloud during setup (Dbt will prompt a suggested dbt_ + first initial + last name)
 
 ## Usage
@@ -37,3 +37,4 @@ Go over to Snowflake and browse your databases and schemas to see that you now h
 * REPORTING.ANALYTICS.PRICING_SUMMARY_PAST_90
 * REPORTING.ANALYTICS_STAGING.STG_LINEITEM
 
+Query the views.
