@@ -26,11 +26,11 @@ create database reporting;
 
 Try creating a feature branch in the Develop area.  
 
-In Develop mode in Dbt Cloud, go into `pricing_summary_past_90.sql` and run:
+In Develop mode in Dbt Cloud, go into `pricing_summary.sql` and run:
     Build +model (Upstream)
 
 Now go over to Snowflake and browse your databases and schemas to see that you now have two views that were created by Dbt:
-* REPORTING.<YOUR_DEVELOPER_SCHEMA>.PRICING_SUMMARY_PAST_90
+* REPORTING.<YOUR_DEVELOPER_SCHEMA>.PRICING_SUMMARY
 * REPORTING.<YOUR_DEVELOPER_SCHEMA>_STAGING.STG_LINEITEM
 
 Query the views.
@@ -38,7 +38,7 @@ Query the views.
 Setup a deployment in dbt Cloud (name it whatever you want).  Use the same `REPORTING` database, but a different schema such as `ANALYTICS`. Setup the deployment job and run it.
 
 Now go over to Snowflake and browse your databases and schemas to see that you now have two views that were created by Dbt:
-* REPORTING.ANALYTICS.PRICING_SUMMARY_PAST_90
+* REPORTING.ANALYTICS.PRICING_SUMMARY
 * REPORTING.ANALYTICS_STAGING.STG_LINEITEM
 
 Query the views.

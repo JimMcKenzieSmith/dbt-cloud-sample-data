@@ -2,8 +2,8 @@
 version: 2
 
 models:
-    - name: pricing_summary_past_90
-      description: "The Pricing Summary Report Query provides a summary pricing report for all line items shipped within 90 days of the greatest ship date contained in the database."
+    - name: pricing_summary
+      description: "The Pricing Summary Report Query provides a summary pricing report for all line items shipped prior to 90 days from the greatest ship date contained in the database."
       columns:
           - name: l_returnflag
             description: "The return status of the line items."
