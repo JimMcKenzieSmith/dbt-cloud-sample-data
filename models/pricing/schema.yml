@@ -4,15 +4,27 @@ version: 2
 models:
     - name: pricing_summary
       description: "The Pricing Summary Report Query provides a summary pricing report for all line items shipped prior to 90 days from the greatest ship date contained in the database."
+      tests:
+        - unique:
+            column_name: "l_returnflag || '-' || l_linestatus"
       columns:
           - name: l_returnflag
             description: "The return status of the line items."
             tests:
                 - not_null
+                - accepted_values:
+                    values:
+                      - "A"
+                      - "N"
+                      - "R"
           - name: l_linestatus
             description: "The overall status of the line items."
             tests:
                 - not_null
+                - accepted_values:
+                    values:
+                      - "F"
+                      - "O"
           - name: sum_qty
             description: "The sum of quantity for the return flag and line status combination."
             tests:
