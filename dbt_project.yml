@@ -30,8 +30,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   jim_smith_sample_dbt_project:
-    pricing:
-      materialized: view
+    +materialized: view
     staging:
       +schema: staging
 
