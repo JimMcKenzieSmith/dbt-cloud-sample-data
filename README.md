@@ -19,8 +19,10 @@ create database reporting;
 ```
 
 * Get a free dbt Cloud developer account: https://www.getdbt.com/pricing
-* In setup of the dbt Cloud account, set the database to `REPORTING` and the warehouse to `COMPUTE_WH`.
-* Enter a developer schema into Dbt cloud during setup (Dbt will prompt a suggested dbt_ + first initial + last name)
+* In setup of the dbt Cloud account:
+    * Use the dashed account name which is found in Snowflake under Admin->Accounts when hovering over the account link. Example: `abcdefg-hij98765`
+    * Set the database to `REPORTING` and the warehouse to `COMPUTE_WH`.
+    * Enter a developer schema into Dbt cloud during setup (Dbt will prompt a suggested dbt_ + first initial + last name)
 
 ## Usage
 
