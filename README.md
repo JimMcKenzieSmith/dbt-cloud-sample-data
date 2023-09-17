@@ -51,5 +51,6 @@ Try updating something, create a pull request, and merge to main.
 
 1. We setup Snowflake to have a role that dbt could use.
 2. We setup dbt cloud to connect to our Snowflake account and build models from sample source data.
-3. We have demonstrated that we can develop new features in an isolated feature branch that uses a developer named schema.  
-4. We have also demonstrated that we can merge back to the main branch where the code can be officially deployed (to a QA environment or a Production environment). And the deployed code will use an officially named schema (in this case `analytics`) that runs only the main branch of code.
+3. We have demonstrated that we can develop new features in an isolated feature branch that uses a developer named schema.
+4. We set up some basic data quality tests that run automatically with `dbt build`.
+5. We have also demonstrated that we can merge back to the main branch where the code can be officially deployed (to a QA environment or a Production environment). And the deployed code will use an officially named schema (in this case `analytics`) that runs only the main branch of code.
